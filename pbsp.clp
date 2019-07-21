@@ -45,21 +45,21 @@
 		(yes-or-no-p "Apakah berhasil login setelah memasukan OTP (yes/no)?"))))
 
 (defrule cek-bank-benar ""
-	(domain-masalah akun)
+	(domain-masalah pembayaran)
    (not (bank-benar ?))
    =>
    (assert (bank-benar 
 		(yes-or-no-p "Apakah bank yang anda pilih sama dengan bank tujuan transfer (yes/no)?"))))
 
 (defrule cek-pengirim-benar ""
-	(domain-masalah akun)
+	(domain-masalah pembayaran)
    (bank-benar yes)
    =>
    (assert (pengirim-benar 
 		(yes-or-no-p "Apakah informasi pengirim sesuai dengan yang anda input diawal? (yes/no)?"))))		
 		
 (defrule cek-nominal-benar ""
-	(domain-masalah akun)
+	(domain-masalah pembayaran)
    (pengirim-benar yes)
    =>
    (assert (nominal-benar
