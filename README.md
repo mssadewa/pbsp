@@ -9,12 +9,22 @@ Clips ( [Windows 32bit](https://sourceforge.net/projects/clipsrules/files/CLIPS/
 1. Download atau clone repository ini.
 2. Buka CLIPSIDE.
 <p align="center">
-![Membuka CLIPS IDE](https://i.ibb.co/F5cvytg/clips-1.png)
+  <img src="https://i.ibb.co/F5cvytg/clips-1.png" alt="Buka aplikasi CLIPS">
 </p>
 3. Load File yang tadi didownload. Dengan cara **File** -> **Load**.
-![Meload File CLIPS]()
+<p align="center">
+  <img src="https://i.ibb.co/4SpbxnS/clips-3.png" alt="Meload file contoh clips yang sudah didownload">
+  <img src="https://i.ibb.co/BqHTcXL/clips-4.png" alt="Pilih file CLIPS">
+</p>
 4. Pastikan output akhir TRUE seperti gambar dibawah.
-![Pastikan output line akhir bernilai TRUE]()
+<p align="center">
+  <img src="https://i.ibb.co/rskfrVs/clips-5.png" alt="Pastikan output line akhir bernilai TRUE">
+</p>
 4. Jalankan perintah `(reset)`.
-
+<p align="center">
+  <img src="https://i.ibb.co/9tKBfp9/clips-6.png" alt="Reset dahulu">
+</p>
 5. Jalankan perintah `(run)`.
+<p align="center">
+  <img src="https://i.ibb.co/WpXmxyH/clips-7.png" alt="Untuk eksekusi lakukan RUN">
+</p>
