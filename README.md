@@ -8,7 +8,9 @@ Clips ( [Windows 32bit](https://sourceforge.net/projects/clipsrules/files/CLIPS/
 ## Langkah - Langkah
 1. Download atau clone repository ini.
 2. Buka CLIPSIDE.
+<p align="center">
 ![Membuka CLIPS IDE](https://i.ibb.co/F5cvytg/clips-1.png)
+</p>
 3. Load File yang tadi didownload. Dengan cara **File** -> **Load**.
 ![Meload File CLIPS]()
 4. Pastikan output akhir TRUE seperti gambar dibawah.
