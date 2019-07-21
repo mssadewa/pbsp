@@ -4,20 +4,59 @@
 	(slot nohp)
 	(slot terverifikasi))
 
-(assert (user 
-	(email "user1@email.com") 
-	(password "Pass@1") 
-	(nohp "08111010001") 
+(assert (user
+	(email "user1@email.com")
+	(password "pass@1")
+	(nohp "8111010001")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user2@email.com")
+	(password "pass@2")
+	(nohp "8111010002")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user3@email.com")
+	(password "pass@3")
+	(nohp "8111010003")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user4@email.com")
+	(password "pass@4")
+	(nohp "8111010004")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user5@email.com")
+	(password "pass@5")
+	(nohp "8111010005")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user6@email.com")
+	(password "pass@6")
+	(nohp "8111010006")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user7@email.com")
+	(password "pass@7")
+	(nohp "8111010007")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user8@email.com")
+	(password "pass@8")
+	(nohp "8111010008")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user9@email.com")
+	(password "pass@9")
+	(nohp "8111010009")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user10@email.com")
+	(password "pass@10")
+	(nohp "81110100010")
+	(terverifikasi "yes")))
+(assert (user
+	(email "user11@email.com")
+	(password "pass@11")
+	(nohp "81110100011")
 	(terverifikasi "yes")))
 
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
-(assert (user   (email "user1@email.com")   (password "pass@1")   (nohp "8111010001")   (terverifikasi "yes")))
