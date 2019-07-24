@@ -3,8 +3,8 @@ Pusat Bantuan dengan Sistem Pakar.
 Repository ini dimaksudkan untuk melengkapi tugas final exam mata kuliah _expert system_ / _sistem pakar_ 
 
 ## Table of Contents :
-* [Facts and Rules](#)
-* [D-Tree](#)
+* [Tree](https://github.com/mssadewa/pbsp#tree)
+* [Facts and Rules](https://github.com/mssadewa/pbsp#facts-and-rules)
 * [Software Rquirements](https://github.com/mssadewa/pbsp#software-requirements)
 * [Langkah - Langkah Instalasi](https://github.com/mssadewa/pbsp#langkah---langkah)
 
