@@ -16,12 +16,23 @@
        then yes 
        else no))
 
+;
+;	Kuisioner untuk mendapatkan fakta
+;
+
+
 (defrule pilih-domain-masalah ""
    (not (domain-masalah ?))
    =>
    (assert (domain-masalah 
 		(ask-question "Terkait apa masalah anda (akun/pembayaran/transaksi)?"
 			akun pembayaran transaksi))))
+
+
+;
+;	Domain masalah "Akun"
+;
+
 	   
 (defrule cek-email-terverifikasi ""
 	(domain-masalah akun)
@@ -37,12 +48,24 @@
    (assert (password-benar 
 		(yes-or-no-p "Apakah muncul form OTP (yes/no)?"))))
 
+(defrule cek-terima-otp""
+	(domain-masalah akun)
+	(password-benar yes)
+   =>
+   (assert (terima-otp
+		(yes-or-no-p "Apakah anda menerima OTP (yes/no)?"))))
+
 (defrule cek-otp-benar ""
 	(domain-masalah akun)
-   (password-benar yes)
+   (terima-otp yes)
    =>
    (assert (otp-benar 
 		(yes-or-no-p "Apakah berhasil login setelah memasukan OTP (yes/no)?"))))
+
+
+;
+;	Domain masalah "pembayaran"
+;
 
 (defrule cek-bank-benar ""
 	(domain-masalah pembayaran)
@@ -64,6 +87,10 @@
    =>
    (assert (nominal-benar
 		(yes-or-no-p "Apakah nominal yang anda transfer sesuai dengan yang diinstruksikan (yes/no)?"))))
+
+;
+;	Domain masalah "Transaksi"
+;
 		
 (defrule cek-status-transaksi ""
 	(domain-masalah transaksi)
@@ -73,12 +100,36 @@
 		(ask-question "Apakah status transaksi di ecommerce? (terbayar/diproses/terkirim/sampai)?"
 			terbayar diproses terkirim sampai))))
 
-(defrule cek-lokasi ""
+(defrule cek-lebih-24jam ""
+	(domain-masalah transaksi)
+	(or (status-transaksi terbayar)
+	(status-transaksi diproses))
+   =>
+   (assert (lebih-24jam
+		(yes-or-no-p "Apakah status nya sudah lebih dari 24 jam (yes/no)?"))))
+
+(defrule cek-1-pulau ""
 	(domain-masalah transaksi)
 	(status-transaksi terkirim)
    =>
-   (assert (lokasi
-		(yes-or-no-p "Apakah lokasi anda dengan penjual adalah satu pulau? (yes/no)?"))))
+   (assert (penjual-pembeli-1-pulau
+		(yes-or-no-p "Apakah lokasi anda dengan penjual adalah satu pulau (yes/no)?"))))
+
+(defrule cek-lebih-5hari ""
+	(domain-masalah transaksi)
+	(status-transaksi terkirim)
+	(penjual-pembeli-1-pulau no)
+   =>
+   (assert (lebih-5hari
+		(yes-or-no-p "Apakah pengiriman sudah lebih dari 5 hari (yes/no)?"))))
+
+(defrule cek-lebih-1minggu ""
+	(domain-masalah transaksi)
+	(status-transaksi terkirim)
+	(penjual-pembeli-1-pulau yes)
+   =>
+   (assert (lebih-1minggu
+		(yes-or-no-p "Apakah pengiriman sudah lebih dari 1 minggu (yes/no)?"))))
 
 (defrule cek-barang-sampai ""
 	(domain-masalah transaksi)
