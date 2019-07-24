@@ -8,28 +8,31 @@ Repository ini dimaksudkan untuk melengkapi tugas final exam mata kuliah _expert
 * [Software Rquirements](https://github.com/mssadewa/pbsp#software-requirements)
 * [Langkah - Langkah Instalasi](https://github.com/mssadewa/pbsp#langkah---langkah)
 
-
-## Facts and Rules
-F1	= Email terverifikasi.
-F2	= Password Benar.
-F3	= Menerima OTP.
-F4	= OTP benar (_sehingga muncul pesan berhasil login_).
-F5	= Bank tujuan transfer sesuai dengan yang dipilih saat melakukan checkout.
-F6	= Identitas pengirim (transfer) sama dengan yang diinput saat checkout.
-F7	= Nominal yang ditransfer sesuai dengan yang diinstruksikan e-commerce.
-F8	= Status Transaksi.
-F9	= sudah 24 jam status tidak berubah.
-F10 = Lokasi Penjual dan Pembeli 1 pulau?
-F11 = Pengiriman 1 pulau maksimal 5 hari.
-F12 = Pengiriman beda pula maksimal 1 minggu.
-F13 = Barang sudah diterima.
-F14 = Kondisi nya sesuai dengan yang tertulis pada judul, deksripsi, maupun gambar.
-
 ## Tree
 
 <p align=center>
-	<img src="https://i.ibb.co/HPvLcNC/ecommerce.png" />
+	<img src="https://raw.githubusercontent.com/mssadewa/pbsp/master/ecommerce.png" />
 </p>
+
+
+## Facts and Rules
+|Code | Facts |
+|:---:|:------|
+|F1	| Email terverifikasi.								                            |
+|F2	| Password Benar.                                                               |
+|F3	| Menerima OTP.                                                                 |
+|F4	| OTP benar (_sehingga muncul pesan berhasil login_).                           |
+|F5	| Bank tujuan transfer sesuai dengan yang dipilih saat melakukan checkout.      |
+|F6	| Identitas pengirim (transfer) sama dengan yang diinput saat checkout.         |
+|F7	| Nominal yang ditransfer sesuai dengan yang diinstruksikan e-commerce.         |
+|F8	| Status Transaksi.                                                             |
+|F9	| sudah 24 jam status tidak berubah.                                            |
+|F10 | Lokasi Penjual dan Pembeli 1 pulau?                                          |
+|F11 | Pengiriman 1 pulau maksimal 5 hari.                                          |
+|F12 | Pengiriman beda pula maksimal 1 minggu.                                      |
+|F13 | Barang sudah diterima.                                                       |
+|F14 | Kondisi nya sesuai dengan yang tertulis pada judul, deksripsi, maupun gambar.|
+
 
 
 ## Software Requirements
