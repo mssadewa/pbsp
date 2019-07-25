@@ -162,7 +162,7 @@
 ;
 
 (defrule S-0 "Kesimpulan dan Solusi jika tidak ada masalah."
-	(domain-masalah akun)
+	(or (domain-masalah akun)(domain-masalah pembayaran)(domain-masalah transaksi))
 	(or (F4 no)(F7 no)(F14 yes))
 	(not (kesimpulan-solusi ?))
 	=>
