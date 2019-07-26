@@ -33,6 +33,99 @@ Repository ini dimaksudkan untuk melengkapi tugas final exam mata kuliah _expert
 |F13 | Barang sudah diterima.                                                       |
 |F14 | Kondisi nya sesuai dengan yang tertulis pada judul, deksripsi, maupun gambar.|
 
+|No|Rule Code|Rule|
+|:-:|:-:|:--|
+"|1|S-0|IF 
+domain-maslah = akun OR domain-masalah = pembayaran OR domain-masalah = transaksi 
+AND 
+F4 = no OR F7 = no OR F14 = yes
+THEN S-0|"
+"|2|S-1|IF
+domain-masalah = akun
+AND
+F1 = no
+THEN S-1|"
+"|3|S-2|IF
+domain-masalah = akun
+AND
+F2 = no
+THEN S-2|"
+"|4|S-3|IF
+domain-masalah = akun
+AND
+F2 = yes
+F3 = no
+THEN S-3|"
+"|5|S-4|IF
+domain-masalah = akun
+AND
+F2 = yes
+F3 = yes
+F4 = no
+THEN S-4|"
+"|6|S-6|IF
+domain-masalah = pembayaran
+AND
+F5 = no
+THEN S-6|"
+"|7|S-7|IF
+domain-masalah = pembayaran
+AND
+F5 = yes
+F6 = no
+THEN S-7|"
+"|8|S-8|IF
+domain-masalah = pembayaran
+AND
+F5 = yes
+F6 = yes
+F7 = no
+THEN S-8|"
+"|9|S-9|IF
+domain-masalah = transaksi
+AND
+F8 = terbayar OR F8 diproses
+AND
+F9  = no
+THEN S-9|"
+"|10|S-10|IF
+domain-masalah = transaksi
+AND
+F8 = terbayar OR F8 = diproses
+AND
+F9 = yes
+THEN S-10|"
+"|11|S-11|IF
+domain-masalah = transaksi
+AND
+F8 = terkirim
+AND
+F10 = no OR F10 = yes
+AND
+F11 = no OR F12 = no
+THEN S-11|"
+"|12|S-12|IF
+domain-masalah = transaksi
+AND
+F8 = terkirim
+AND
+F10 = yes OR F10 = no
+AND F11 = yes OR F12 = yes
+THEN S-12|"
+"|13|S-13|IF
+domain-masalah = transaksi
+AND
+F8 = sampai
+F13 = no
+THEN S-13|"
+"|14|S-14|IF
+domain-masalah = transaksi
+AND
+F8 = sampai
+F13 = yes
+F14 = no
+THEN S-14|"
+
 ## Software Requirements
 Clips ( [Windows 32bit](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.30/clips_windows_32_bit_executables_630.msi/download) | [Windows 64bit](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.30/clips_windows_64_bit_executables_630.msi/download) | [Linux](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.30/clips_core_source_630.zip/download) | [Mac OSX](https://sourceforge.net/projects/clipsrules/files/CLIPS/6.30/clips_mac_osx_executables_630.zip/download) )
 

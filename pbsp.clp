@@ -225,15 +225,15 @@
 	
 (defrule S-9 "Kesimpulan & Solusi jika status terbayar belum sampai 24 jam."
 	(domain-masalah transaksi)
-	(F8 terbayar)
+	(or(F8 terbayar)(F8 diproses))
 	(F9 no)
 	(not (kesimpulan-solusi ?))
 	=>
-	(assert (kesimpulan-solusi "Penjual memiliki waktu 24 jam setelah menerima pesanan anda, Jika dalam 24 jam tidak diproses maka akan dibatalkan otomatis oleh sistem.")))
+	(assert (kesimpulan-solusi "Penjual memiliki waktu 24 jam setelah menerima pesanan anda dan 24 jam untuk memproses pesanan anda, Jika dalam 24 jam tidak diproses atau dikirim maka akan dibatalkan otomatis oleh sistem.")))
 	
 (defrule S-10 "Kesimpulan & Solusi jika status terbayar namun sampai 24 jam tidak batal otomatis."
 	(domain-masalah transaksi)
-	(F8 terbayar)
+	(or (F8 terbayar)(F8 diproses))
 	(F9 yes)
 	(not (kesimpulan-solusi ?))
 	=>
@@ -241,6 +241,7 @@
 	
 (defrule S-11 "Kesimpulan & Solusi jika status terkirim dan masih dalam waktu normal."
 	(domain-masalah transaksi)
+	(F8 terkirim)
 	(or (F10 yes)(F10 no))
 	(or (F11 no)(F12 no))
 	(not (kesimpulan-solusi ?))
@@ -249,6 +250,7 @@
 	
 (defrule S-12 "Kesimpulan & Solusi jika status terkirim namun sudah melebihi waktu normal."
 	(domain-masalah transaksi)
+	(F8 terkirim)
 	(or (F10 yes)(F10 no))
 	(or (F11 yes)(F12 yes))
 	(not (kesimpulan-solusi ?))
